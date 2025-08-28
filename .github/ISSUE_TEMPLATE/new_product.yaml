@@ -1,0 +1,28 @@
+name: New Product
+description: form New Product
+title: "[Bug] "
+body:
+- type: markdown
+  attributes:
+    value: "## Welcome to new product!"
+- type: input
+  id: product_name
+  attributes:
+    label: Product Name
+    description: "name of product"
+    placeholder: "name of product"
+  validations:
+    required: true
+- type: checkboxes
+  id: cbb
+  attributes:
+    label: Task
+    description: You may select more than one.
+    options:
+      - label: APP 1
+        required: true
+      - label: APP recon
+      - label: L1
+      - label: L2
+      
+      
