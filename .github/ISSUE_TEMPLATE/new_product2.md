@@ -21,6 +21,11 @@ assignees: ''
 - [ ] Cust Id Length : #nopel_length
 - [ ] Modifikasi Nopel : [Ya/Tidak]
 
+# Task
+- [ ] Loket 1
+- [ ] Loket 2
+- [ ] Recon
+
 # Dev
 - SIT
 - BA UAT
