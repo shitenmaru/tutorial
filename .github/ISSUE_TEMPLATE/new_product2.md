@@ -1,6 +1,6 @@
 ---
 name: New Product
-about: Create a Product
+about: Create a Product 2
 title: "[New]"
 labels: 
 assignees: ''
