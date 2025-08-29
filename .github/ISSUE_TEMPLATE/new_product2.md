@@ -1,7 +1,7 @@
 ---
 name: New Product 2
 about: Create a Product
-title: "[New]"
+title: "New MKMSP - "
 labels: 
 assignees: ''
 
