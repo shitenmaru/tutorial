@@ -1,0 +1,22 @@
+name: Update status on project board
+on:
+  issues:
+    types: [assigned]
+  pull_request:
+    types: [assigned]
+jobs:
+  update_project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get today's date
+        id: date
+        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+
+      - name: Update "Start date" field
+        uses: EndBug/project-fields@v2
+        with:
+            operation: set
+            fields: Start date,Status
+            github_token: ${{ secrets.TOKEN1 }}
+            project_url: https://github.com/users/shitenmaru/projects/1
+            values: ${{ steps.date.outputs.date }},Dev - In Progress
