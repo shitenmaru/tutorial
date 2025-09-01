@@ -1,6 +1,16 @@
 name : Project Automation
-on : 
-  workflow_dispatch:
+on:
+  issues:
+    types:
+      - opened
+      - reopened
+      - closed
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - review_requested
+      - closed
 jobs:
   my_job:
       uses: EndBug/project-fields@v2
