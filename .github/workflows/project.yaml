@@ -1,0 +1,13 @@
+name : Project Automation
+on : 
+  workflow_dispatch:
+jobs:
+  my_job:
+      uses: EndBug/project-fields@v2
+      with:
+        operation: set
+        fields: "Est. Hours"
+        github_token: ${{ secrets.PROJECT_PAT }}
+        project_url: https://github.com/users/shitenmaru/projects/1
+        values: 1
+        
