@@ -12,7 +12,7 @@ jobs:
         uses: EndBug/project-fields@v2
         with:
             operation: set
-            fields: "Start date",Status
+            fields: Start date,Status
             github_token: ${{ secrets.TOKEN1 }}
             project_url: https://github.com/users/shitenmaru/projects/1
-            values: "2025-09-01","Dev - In Progress"
+            values: 2025-09-01,Dev - In Progress
