@@ -24,7 +24,7 @@ jobs:
       
       - name: Update "Start date" field
         uses: EndBug/project-fields@v2
-        if: ${{ steps.date.outputs.date }} == 'Dev - New'
+        if: steps.build.outputs.result == 'Dev - New'
         with:
             operation: set
             fields: Start date,Status
