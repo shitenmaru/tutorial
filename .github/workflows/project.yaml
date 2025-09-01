@@ -12,6 +12,16 @@ jobs:
         id: date
         run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
 
+      - name: Get Project Data
+        uses: EndBug/project-fields@v2
+        with:
+            operation: get
+            fields: Status
+            github_token: ${{ secrets.TOKEN1 }}
+            project_url: https://github.com/users/shitenmaru/projects/1
+
+      - run: echo ${{ steps.fields.outputs.values }}
+      
       - name: Update "Start date" field
         uses: EndBug/project-fields@v2
         with:
