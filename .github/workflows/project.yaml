@@ -7,7 +7,6 @@ jobs:
       with:
         operation: set
         fields: "Est. Hours"
-        github_token: ${{ secrets.PROJECT_PAT }}
+        github_token: ${{ secrets.DEV_TOKEN }}
         project_url: https://github.com/users/shitenmaru/projects/1
         values: 1
-        
