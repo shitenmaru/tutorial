@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Get today's date
         id: date
-        run: echo "date=$(date +'%Y-%m-%d')"
+        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
 
       - name: Update "Start date" field
         uses: EndBug/project-fields@v2
