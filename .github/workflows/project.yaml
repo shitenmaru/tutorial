@@ -1,22 +1,18 @@
-name : Project Automation
+name: Update status on project board
 on:
   issues:
-    types:
-      - opened
-      - reopened
-      - closed
+    types: [assigned]
   pull_request:
-    types:
-      - opened
-      - reopened
-      - review_requested
-      - closed
+    types: [assigned]
 jobs:
-  my_job:
-      uses: EndBug/project-fields@v2
-      with:
-        operation: set
-        fields: "Est. Hours"
-        github_token: ${{ secrets.DEV_TOKEN }}
-        project_url: https://github.com/users/shitenmaru/projects/1
-        values: 1
+  update_project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update "Start date" field
+        uses: EndBug/project-fields@v2
+        with:
+            operation: set
+            fields: "Start date"
+            github_token: ${{ secrets.TOKEN }}
+            project_url: https://github.com/users/shitenmaru/projects/1
+            values: "2025-09-01"
